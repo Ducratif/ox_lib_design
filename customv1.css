@@ -1,0 +1,67 @@
+/* ============================================================
+   Design Simple Ox_Lib By Ducratif | DucraShop
+   ============================================================ */
+
+/* 1. Le Conteneur Principal (La grosse boîte) */
+.mantine-Menu-dropdown,
+.mantine-HoverCard-dropdown,
+.mantine-Paper-root[role="dialog"],
+div[role="dialog"] {
+    /* Fond noir léger global */
+    background-color: rgba(15, 15, 15, 0.90) !important;
+    /* La bordure bleue autour de tout le menu */
+    border: 2px solid #008CFF !important;
+    border-radius: 4px !important;
+    /* Padding pour que les boutons ne touchent pas le bord bleu */
+    padding: 8px !important; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.5) !important;
+}
+
+/* 2. Les Boutons / Items (Pour qu'ils ressemblent à des blocs comme sur le Screen 1) */
+.mantine-Menu-item,
+button[class*="mantine-UnstyledButton-root"],
+button[type="button"] {
+    /* IMPORTANT: Fond solide foncé (gris/noir) pour faire un "bloc" */
+    background-color: rgba(40, 40, 40, 0.6) !important;
+    /* Petite bordure grise par défaut pour définir le bloc */
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    /* Espace entre chaque bouton (C'est ça qui crée l'effet séparé) */
+    margin-bottom: 6px !important;
+    border-radius: 4px !important;
+    color: white !important;
+    transition: all 0.1s ease-in-out !important;
+}
+
+/* 3. Effet Survol (Hover) - Le bloc devient bleu */
+.mantine-Menu-item:hover,
+.mantine-Menu-item[data-hovered],
+button[class*="mantine-UnstyledButton-root"]:hover,
+button[type="button"]:hover {
+    /* Fond bleu foncé au survol */
+    background-color: rgba(0, 140, 255, 0.25) !important;
+    /* Bordure bleue brillante */
+    border: 1px solid #008CFF !important;
+    /* Petit effet de "pop" */
+    transform: translateX(3px);
+}
+
+/* 4. Le Header / Titre (Ex: "Sélectionner un personnage") */
+/* On essaie de le rendre plus imposant comme le "LIB FB" */
+.mantine-Text-root {
+    font-family: sans-serif !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* 5. Les Icônes */
+.mantine-Menu-itemIcon, 
+svg {
+    color: #008CFF !important;
+}
+
+/* 6. Fix pour enlever les arrière-plans parasites de Mantine */
+div[class*="mantine-ScrollArea-root"] {
+    background: transparent !important;
+}
